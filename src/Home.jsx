@@ -107,7 +107,9 @@ function Home() {
                             />
                             <div className="p-3">
                                 <h2 className="font-bold text-sm">{filme.title}</h2>
-                                <p className="text-yellow-400 text-sm mt-1">⭐ {filme.vote_average.toFixed(1)}</p>
+                                <p className="text-yellow-400 text-sm mt-1">
+                                    ⭐ {filme.vote_average ? filme.vote_average.toFixed(1) : 'N/A'}
+                                </p>
                             </div>
                         </div>
                     ))
