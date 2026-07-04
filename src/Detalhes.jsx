@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import BotaoVoltar from './BotaoVoltar.jsx'
 
 function Detalhes() {
     const { id } = useParams()
@@ -27,12 +28,9 @@ function Detalhes() {
 
     return (
         <div className="min-h-screen bg-gray-900 text-white p-8 pb-16">
-            <button
-                onClick={() => navigate('/')}
-                className="mb-6 bg-gray-800 text-xs text-gray-400 px-4 py-2 rounded-lg hover:bg-gray-700 hover:text-gray-300 inset-ring inset-ring-gray-400/20"
-            >
-                ← Voltar
-            </button>
+            <div className="mb-4">
+                <BotaoVoltar />
+            </div>
             <div className="flex gap-8">
                 <img
                     src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`}
