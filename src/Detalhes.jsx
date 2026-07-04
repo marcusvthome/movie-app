@@ -29,7 +29,7 @@ function Detalhes() {
         <div className="min-h-screen bg-gray-900 text-white p-8 pb-16">
             <button
                 onClick={() => navigate('/')}
-                className="mb-6 bg-gray-700 px-4 py-2 rounded-lg hover:bg-gray-600"
+                className="mb-6 bg-gray-800 text-xs text-gray-400 px-4 py-2 rounded-lg hover:bg-gray-700 hover:text-gray-300 inset-ring inset-ring-gray-400/20"
             >
                 ← Voltar
             </button>
@@ -41,6 +41,11 @@ function Detalhes() {
                 />
                 <div>
                     <h1 className="text-4x1 font-bold mb-4">{filme.title}</h1>
+                    {filme.genres.map((genre) => (
+                        <span key={genre.id} className='inline-flex items-center rounded-md bg-gray-400/10 px-2 py-1 text-xs font-medium text-gray-400 inset-ring inset-ring-gray-400/20 mr-1 mb-4'>
+                            {genre.name}
+                        </span>
+                    ))}
                     <p className="text-yellow-400 text-lg mb-4">⭐ {filme.vote_average.toFixed(1)}</p>
                     <p className="text-gray-400 mb-4">{new Date(filme.release_date + 'T00:00:00').toLocaleDateString('pt-BR')}</p>
                     <p className="text-gray-200 leading-relaxed">{filme.overview}</p>
