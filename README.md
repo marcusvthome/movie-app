@@ -18,7 +18,7 @@ Aplicação de filmes desenvolvida com React, consumindo a API do TMDB (The Movi
 
 ### Screenshot
 
-![](./public/screenshot.jpg)
+![](./public/screenshot.png)
 
 ### Links
 
